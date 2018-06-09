@@ -36,7 +36,7 @@ class LddLibraryParser(object):
         self.namePathPattern = re.compile('[\s]*([^ /]+) => ([^ ]+).*')
 
         #         /lib/ld-linux.so.2 (0xb7785000)
-        self.pathPattern = re.compile('[\s]*([^ ]+) [(]0x[\w]+[)]')
+        self.pathPattern = re.compile('[\s]*([^ ]+).* [(]0x[\w]+[)]')
 
     def parse(self, line):
         library = self.parseNamePathLine(line)
